@@ -2,7 +2,6 @@ import './App.css';
 import { useState } from "react";
 
 function Square({value, onSquareClick}) {
-
   return (
   <button className="square" onClick={onSquareClick}>{value}</button>
   )
@@ -20,13 +19,10 @@ function App() {
     nextSquares[i] = isXNext ? 'X' : 'O';
     setSquares(nextSquares);
     setisXNext(!isXNext);
-
-
   }
-
+  
   const winner = calculateWinner(squares);
   let status;
-
   if (winner) {
     status = "Winner is : " + winner;
   } else {
