@@ -23,6 +23,21 @@ body {
   width: 34px;
 }
 
-.board-row {
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.main {
   display: flex;
+  flex-direction: row;
+}
+
+.main-info {
+  margin-left: 20px;
 }
